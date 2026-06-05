@@ -41,4 +41,7 @@ function toggleTask(id) {
         )
     );
 }
-    
+
+function deleteTask(id) {
+    setTasks(tasks.filter((task) => task.id !== id));
+}
