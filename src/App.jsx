@@ -10,3 +10,9 @@ function App() {
         return storedTasks ? JSON.parse(storedTasks) : [];
     }
 }
+
+const [text, setText] = useState("");
+
+useEffect(() => {
+    localStorage.setItem(Store, JSON.stringify(tasks));
+}, [tasks]);
