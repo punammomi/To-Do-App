@@ -22,3 +22,14 @@ const remaning = useMemo(() => {
 },
 [tasks]);
 
+function addTask() {
+    event.preventDefault();
+    const title = text.trim();
+    if (!title) return;
+
+    setTasks([
+        {id: crypto.randomUUID(), title, done: false},
+        ...tasks,
+    ]);
+    setText("");
+}
