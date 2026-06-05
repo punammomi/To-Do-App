@@ -33,3 +33,12 @@ function addTask() {
     ]);
     setText("");
 }
+
+function toggleTask(id) {
+    setTasks(
+        tasks.map((task) =>
+            task.id === id ? {...task, done: !task.done} : task
+        )
+    );
+}
+    
