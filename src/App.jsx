@@ -16,3 +16,9 @@ const [text, setText] = useState("");
 useEffect(() => {
     localStorage.setItem(Store, JSON.stringify(tasks));
 }, [tasks]);
+
+const remaning = useMemo(() => {
+    () => tasks.filter((task) => !task.done).length;
+},
+[tasks]);
+
