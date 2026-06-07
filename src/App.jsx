@@ -8,8 +8,7 @@ function App() {
     const [tasks, setTasks] = useState(() => {
         const storedTasks = localStorage.getItem(Store);
         return storedTasks ? JSON.parse(storedTasks) : [];
-    }
-}
+    });
 
 const [text, setText] = useState("");
 
@@ -71,5 +70,34 @@ return (
                     <Plus size={20} />
                 </button>
             </form>
-                    
-                    )
+
+            <ul className="todo-list">
+                {tasks.length === 0 ? (
+                    <li className="empty-state">No tasks to display</li>
+                ) : (
+                    tasks.map((task) => (
+                        <li className={task.done ? "todo-done" : "todo"} key={task.id}>
+                            <button
+                            className="check-button"
+                                onClick={() => toggleTask(task.id)}
+                                aria-label={task.done ? "Mark as incomplete" : "Mark as complete"}
+                            >
+                                {task.done && <Check size={16} />}
+                            </button>
+                            <span>{task.title}</span>
+                            <button
+                                className="delete-button"
+                                onClick={() => deleteTask(task.id)}
+                                aria-label="Delete task"
+                            >
+                                <Trash2 size={20} />
+                            </button>
+                        </li>
+                    ))
+                )}
+            </ul>
+        </section>
+    </main>
+);
+}
+export default App;
