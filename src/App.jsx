@@ -63,6 +63,7 @@ return (
                <input 
                     value={text}
                     onChange={(event) => setText(event.target.value)}
-
+                    placeholder="Add a new task"
+                    aria-label="New task title"
                     
                     )
