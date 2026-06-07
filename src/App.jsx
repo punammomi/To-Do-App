@@ -65,5 +65,11 @@ return (
                     onChange={(event) => setText(event.target.value)}
                     placeholder="Add a new task"
                     aria-label="New task title"
+                />
+
+                <button type="submit" aria-label="Add task">
+                    <Plus size={20} />
+                </button>
+            </form>
                     
                     )
