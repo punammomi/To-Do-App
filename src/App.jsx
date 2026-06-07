@@ -45,3 +45,15 @@ function toggleTask(id) {
 function deleteTask(id) {
     setTasks(tasks.filter((task) => task.id !== id));
 }
+
+return (
+    <main className="app-shell">
+        <section className="todo-panel" aria-label="Todo List" >
+            <header className="header">
+                <div className="title-mark" aria-hidden="true"  >
+                    <ClipboardList size={32} />
+                </div>
+                <div>
+                    <h1>Todo List</h1>
+                    <p>{remaning} task{remaining === 1 ? "" : "s"} left</p>
+                    </div>    )
