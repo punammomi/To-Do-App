@@ -60,7 +60,9 @@ return (
             </header>
 
             <form className="todo-form" onSubmit={addTask}>   
+               <input 
+                    value={text}
+                    onChange={(event) => setText(event.target.value)}
 
-                
                     
                     )
