@@ -56,6 +56,11 @@ return (
                 <div>
                     <h1>Todo List</h1>
                     <p>{remaning} task{remaining === 1 ? "" : "s"} left</p>
-                    </div>    
+                    </div> 
+            </header>
+
+            <form className="todo-form" onSubmit={addTask}>   
+
+                
                     
                     )
