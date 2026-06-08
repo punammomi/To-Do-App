@@ -14,3 +14,11 @@ body{
     min-height: 100vh;
     min-width: 100vw;
 }
+
+button, input {
+    font : inherit;
+}
+
+button{
+    cursor: pointer;
+}
