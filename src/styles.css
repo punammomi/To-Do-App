@@ -22,3 +22,14 @@ button, input {
 button{
     cursor: pointer;
 }
+
+.app-shell{
+    display : grid;
+    min-height: 100vh;
+    place-items: center;
+    padding: 24px;
+    background:
+    radial-gradient(circle at 0% 0%, #f5f7fb, #e4e9f2),
+    linear-gradient(135deg, #f5f7fb, #e4e9f2);
+}
+
